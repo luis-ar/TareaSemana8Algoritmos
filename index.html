@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Registro de empleados</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Registro de empleados</h1>
+    <form id="formulario-registro">
+      <label for="codigo">Código:</label>
+      <input type="text" id="codigo" name="codigo" required /><br />
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required /><br />
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br />
+
+      <button type="button" id="boton-guardar">Guardar</button>
+      <button type="button" id="boton-actualizar">Actualizar</button>
+      <button type="button" id="boton-consultar">Consultar</button>
+      <button type="button" id="boton-eliminar">Eliminar</button>
+    </form>
+
+    <table id="tabla-empleados">
+      <thead>
+        <tr>
+          <th>Orden</th>
+          <th>Código</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody class="llenar-datos"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+  </body>
+</html>
