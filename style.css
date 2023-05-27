@@ -58,3 +58,11 @@ th {
   background-color: #2b8fed;
   color: white;
 }
+
+.imprimir{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 30px;
+}
