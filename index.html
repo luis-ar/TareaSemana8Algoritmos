@@ -40,5 +40,28 @@
     </table>
 
     <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.js"></script>
+    <script>
+      const tabla = document.querySelector("#tabla-empleados");
+      const boton = document.querySelector(".imprimir");
+      boton.addEventListener("click", () => {
+        const doc = new jsPDF("p", "pt", "letter");
+        const margin = 20;
+        const scale =
+          (doc.internal.pageSize.width - margin * 2) /
+          document.body.scrollWidth;
+        doc.html(tabla, {
+          x: margin,
+          y: margin,
+          html2canvas: {
+            scale: scale,
+          },
+          callback: function (doc) {
+            doc.save("lista");
+          },
+        });
+      });
+    </script>
   </body>
 </html>
